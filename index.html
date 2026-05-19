@@ -1,226 +1,149 @@
   <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HourPilot — Weekly Planning for Toggl</title>
-
-  <meta name="description" content="Weekly planning and workload insights for Toggl. Compare planned vs actual time, monitor capacity, and plan directly inside Toggl." />
-
-  <link rel="stylesheet" href="style.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HourPilot — The missing planning layer for Toggl</title>
+<meta name="description" content="A Chrome extension that adds weekly planning, planned-vs-actual tracking, and capacity visibility on top of Toggl. Local-first, free, no account." />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">
-      <div class="logo-box">H</div>
-      <span>HourPilot</span>
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <div class="brand-mark">H</div>
+      <span class="brand-name">HourPilot</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="mailto:hourpilot.support@gmail.com">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-tag">Chrome extension · Free · Local-first</div>
+    <h1>The missing planning layer for Toggl.</h1>
+    <p class="hero-sub">Plan your week, track planned vs actual, see your real capacity. HourPilot reads from Toggl and lives in your browser — no account, no backend, no data leaves your machine.</p>
+    <div class="hero-actions">
+      <a href="#install" class="btn btn-primary">Get HourPilot</a>
+      <a href="#features" class="btn btn-ghost">See how it works</a>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+
+    <div class="feature">
+      <div class="feature-text">
+        <div class="feature-label">Plan</div>
+        <h2>Allocate hours per project, per week.</h2>
+        <p>Pull projects from Toggl, set planned hours with a quick stepper. Footer shows what's left of your capacity. That's the whole workflow — no boards, no tasks, no clutter.</p>
+      </div>
+      <div class="feature-shot">
+        <img src="screen-plan.png" alt="HourPilot Plan tab showing project allocations" loading="lazy" />
+      </div>
     </div>
 
-    <nav>
-      <a href="#features">Features</a>
+    <div class="feature feature-reverse">
+      <div class="feature-text">
+        <div class="feature-label">Vs Actual</div>
+        <h2>See planned vs tracked at a glance.</h2>
+        <p>Live deltas per project. Amber when you're under plan, red when you've overrun, green when you're on track. Untracked work shows up too — projects you billed time to but didn't plan for.</p>
+      </div>
+      <div class="feature-shot">
+        <img src="screen-actual.png" alt="HourPilot Vs Actual tab showing planned vs tracked hours with delta badges" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="feature-text">
+        <div class="feature-label">Capacity</div>
+        <h2>Know if you're overloaded before Friday.</h2>
+        <p>Weekly utilization donut. Daily bars Monday to Sunday. Open the popup mid-week, glance at the color, close it. That's it.</p>
+      </div>
+      <div class="feature-shot">
+        <img src="screen-capacity.png" alt="HourPilot Capacity tab showing weekly utilization donut and daily bars" loading="lazy" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="value-grid">
+      <div class="value">
+        <h3>Local-first</h3>
+        <p>Your token and plans live in <code>chrome.storage</code>. No server, no account, no telemetry. Disconnect anytime — everything wipes.</p>
+      </div>
+      <div class="value">
+        <h3>Read-only</h3>
+        <p>HourPilot never writes to your Toggl account. It reads projects, clients, and time entries. That's it.</p>
+      </div>
+      <div class="value">
+        <h3>Fast</h3>
+        <p>Opens instantly. Cached aggressively. Hand-built UI — no bloated component libraries, no 100KB chart packages.</p>
+      </div>
+      <div class="value">
+        <h3>Honest</h3>
+        <p>No AI features. No "smart suggestions." Three tabs that do exactly what they say. Free, with no paid tier hiding behind a paywall.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install" class="install">
+  <div class="container">
+    <h2>Get HourPilot</h2>
+    <p class="install-sub">Free. Works with any Toggl account.</p>
+
+    <div class="install-cards">
+      <div class="install-card">
+        <div class="install-step">1</div>
+        <h3>Install the extension</h3>
+        <p>The Chrome Web Store version is in review. Until then, download the source from GitHub and load it as an unpacked extension. Build instructions are in the README.</p>
+        <a href="https://github.com/hourpilotsupport-source" class="btn btn-primary" target="_blank" rel="noopener">Get from GitHub</a>
+      </div>
+
+      <div class="install-card">
+        <div class="install-step">2</div>
+        <h3>Connect to Toggl</h3>
+        <p>Open the popup, paste your Toggl API token (found at <a href="https://track.toggl.com/profile" target="_blank" rel="noopener">track.toggl.com/profile</a>), set your weekly capacity. Takes about 30 seconds.</p>
+      </div>
+
+      <div class="install-card">
+        <div class="install-step">3</div>
+        <h3>Plan and track</h3>
+        <p>Add your projects, set planned hours, work in Toggl as usual. Open HourPilot mid-week to see how reality is matching the plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="brand-mark small">H</div>
+      <span>HourPilot</span>
+    </div>
+    <nav class="footer-links">
       <a href="privacy.html">Privacy</a>
       <a href="mailto:hourpilot.support@gmail.com">Support</a>
     </nav>
-
-    <a href="#" class="chrome-btn">
-      Add to Chrome
-    </a>
-  </header>
-
-  <main>
-
-    <section class="hero">
-
-      <div class="hero-left">
-
-        <div class="badge">
-          Lightweight planning for Toggl
-        </div>
-
-        <h1>
-          Plan your week.<br />
-          Track with <span>clarity.</span>
-        </h1>
-
-        <p class="hero-text">
-          HourPilot adds weekly planning, planned vs actual insights,
-          and workload visibility directly inside Toggl.
-        </p>
-
-        <ul class="hero-list">
-          <li>Plan weekly hours per project</li>
-          <li>Compare planned vs actual tracked time</li>
-          <li>Visualize weekly workload capacity</li>
-          <li>Runs locally in your browser</li>
-        </ul>
-
-        <div class="hero-actions">
-          <a href="#" class="primary-btn">
-            Add to Chrome
-          </a>
-        </div>
-
-      </div>
-
-      <div class="hero-right">
-
-        <div class="preview-grid">
-
-          <img src="images/plan.png" class="shot shot-main" alt="HourPilot planning view">
-
-          <img src="images/actual.png" class="shot shot-left" alt="HourPilot vs actual view">
-
-          <img src="images/capacity.png" class="shot shot-right" alt="HourPilot capacity view">
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="trust-strip">
-
-      <div>Local-first</div>
-      <div>No backend</div>
-      <div>No tracking</div>
-      <div>No analytics</div>
-
-    </section>
-
-    <section id="features" class="features">
-
-      <div class="section-title">
-        <span>FEATURES</span>
-        <h2>Everything you need to plan weekly work.</h2>
-      </div>
-
-      <div class="feature-grid">
-
-        <div class="feature-card">
-          <h3>Weekly Planning</h3>
-
-          <p>
-            Allocate hours across projects and instantly see remaining capacity.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Planned vs Actual</h3>
-
-          <p>
-            Compare tracked time against planned workload and identify overruns.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Capacity Tracking</h3>
-
-          <p>
-            Monitor weekly utilization and stay balanced throughout the week.
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="why">
-
-      <div class="why-left">
-
-        <span class="small-title">
-          WHY HOURPILOT
-        </span>
-
-        <h2>
-          Toggl tracks time.<br />
-          HourPilot helps you plan it.
-        </h2>
-
-        <p>
-          Toggl is excellent at tracking completed work.
-          HourPilot adds a lightweight planning layer so you can
-          organize upcoming workload directly inside your existing workflow.
-        </p>
-
-      </div>
-
-      <div class="why-right">
-
-        <img src="images/full-preview.png" alt="HourPilot inside Toggl">
-
-      </div>
-
-    </section>
-
-    <section class="privacy-box">
-
-      <div class="privacy-content">
-
-        <h2>Your data stays local.</h2>
-
-        <p>
-          HourPilot runs locally in your browser.
-          Your Toggl API token is stored locally in Chrome storage
-          and is never sent to external servers.
-        </p>
-
-      </div>
-
-      <div class="privacy-tags">
-
-        <div>Local storage only</div>
-        <div>No tracking</div>
-        <div>No analytics</div>
-        <div>No backend</div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-
-    <div class="footer-top">
-
-      <div>
-        <div class="logo footer-logo">
-          <div class="logo-box">H</div>
-          <span>HourPilot</span>
-        </div>
-
-        <p class="footer-text">
-          Weekly planning and workload insights for Toggl.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="mailto:hourpilot.support@gmail.com">Support</a>
-      </div>
-
+    <div class="footer-note">
+      HourPilot is independent software and not affiliated with, endorsed by, or sponsored by Toggl OÜ.
     </div>
-
-    <div class="footer-bottom">
-
-      <p>
-        HourPilot is an independent tool and is not affiliated with or endorsed by Toggl.
-      </p>
-
-      <p>
-        © 2025 HourPilot
-      </p>
-
-    </div>
-
-  </footer>
+  </div>
+</footer>
 
 </body>
 </html>
