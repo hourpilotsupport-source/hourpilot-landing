@@ -306,4 +306,120 @@ code {
   margin-bottom: 18px;
   font-variant-numeric: tabular-nums;
 }
-.ins
+.install-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.install-card p {
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.install-card .btn {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+/* === FOOTER === */
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 36px 0;
+  background: var(--bg-1);
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+.footer-links {
+  display: flex;
+  gap: 22px;
+}
+.footer-links a {
+  color: var(--text-tertiary);
+  font-size: 13px;
+}
+.footer-links a:hover { color: var(--text-primary); }
+.footer-note {
+  width: 100%;
+  text-align: center;
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 10px;
+}
+
+/* === PRIVACY PAGE === */
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px 100px;
+}
+.legal h1 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.legal .legal-date {
+  color: var(--text-tertiary);
+  font-size: 13px;
+  margin-bottom: 36px;
+}
+.legal h2 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+.legal p, .legal ul {
+  color: var(--text-secondary);
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.legal ul { padding-left: 22px; }
+.legal li { margin-bottom: 6px; }
+.legal a { color: var(--accent-blue); }
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-bottom: 30px;
+}
+.legal-back:hover { color: var(--text-primary); }
+
+/* === RESPONSIVE === */
+@media (max-width: 760px) {
+  .feature {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 40px 0;
+  }
+  .feature-reverse .feature-text { order: 1; }
+  .feature-reverse .feature-shot { order: 2; }
+  .value-grid { grid-template-columns: 1fr; }
+  .install-cards { grid-template-columns: 1fr; }
+  .hero { padding: 70px 0 50px; }
+  .hero h1 { font-size: 36px; }
+  .hero-sub { font-size: 15px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 12px; }
+}
