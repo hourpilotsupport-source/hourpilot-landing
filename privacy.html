@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>HourPilot Privacy Policy</title>
-
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — HourPilot</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div style="max-width:900px;margin:120px auto;padding:0 24px;">
-
-    <h1 style="font-size:56px;margin-bottom:40px;">
-      Privacy Policy
-    </h1>
-
-    <div style="color:rgba(255,255,255,0.72);font-size:18px;line-height:1.8;">
-
-      <p>
-        HourPilot is a local-first browser extension for Toggl Track.
-      </p>
-
-      <br>
-
-      <p>
-        HourPilot does not collect, store, sell, or share personal data.
-      </p>
-
-      <br>
-
-      <p>
-        Your Toggl API token and planning data are stored locally in your browser using Chrome storage and are never transmitted to external servers controlled by HourPilot.
-      </p>
-
-      <br>
-
-      <p>
-        HourPilot does not use analytics, tracking scripts, advertising networks, or third-party telemetry systems.
-      </p>
-
-      <br>
-
-      <p>
-        HourPilot connects directly to the Toggl API only to retrieve project and tracking information required for extension functionality.
-      </p>
-
-      <br>
-
-      <p>
-        HourPilot is an independent tool and is not affiliated with, endorsed by, or associated with Toggl.
-      </p>
-
-      <br><br>
-
-      <p>
-        Contact:
-        hourpilot.support@gmail.com
-      </p>
-
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <div class="brand-mark">H</div>
+      <span class="brand-name">HourPilot</span>
     </div>
-
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mailto:hourpilot.support@gmail.com">Support</a>
+    </nav>
   </div>
+</header>
+
+<main class="legal">
+
+<a href="index.html" class="legal-back">← Back</a>
+
+<h1>Privacy Policy</h1>
+<p class="legal-date">Last updated: May 19, 2026</p>
+
+<p>HourPilot is a Chrome extension that adds a planning layer on top of Toggl Track. This policy explains what data the extension handles and what it doesn't.</p>
+
+<h2>The short version</h2>
+<p>HourPilot does not run any servers. It does not collect, transmit, sell, or share your personal data with anyone. All data the extension uses stays on your device, in your browser. The only external service the extension talks to is the Toggl API, using a token you provide.</p>
+
+<h2>What HourPilot stores locally</h2>
+<p>The following data is stored inside your Chrome browser using the standard <code>chrome.storage</code> API:</p>
+<ul>
+  <li>Your Toggl API token, so the extension can authenticate with Toggl on your behalf.</li>
+  <li>Your weekly capacity setting and your weekly plans (project allocations).</li>
+  <li>Cached copies of your Toggl projects, clients, and time entries to avoid hitting Toggl's API on every popup open. Caches expire automatically.</li>
+  <li>Your Toggl name, email, workspace ID, and timezone, retrieved from Toggl during setup, for display in the extension.</li>
+</ul>
+<p>This data never leaves your device. We do not have access to it. You can wipe it at any time by clicking "Disconnect Toggl" in the extension's Settings panel or by removing the extension.</p>
+
+<h2>What HourPilot sends to Toggl</h2>
+<p>When you open the popup or click refresh, HourPilot makes read-only requests to Toggl's API (<code>api.track.toggl.com</code>) using your API token. Toggl receives standard request metadata (your IP address, browser user-agent, the authenticated request) the same as any normal Toggl client. HourPilot does not write to your Toggl account — it only reads projects, clients, time entries, and your user profile.</p>
+<p>Toggl's handling of this data is governed by their own privacy policy at <a href="https://toggl.com/track/privacy/" target="_blank" rel="noopener">toggl.com/track/privacy</a>.</p>
+
+<h2>What HourPilot does not do</h2>
+<ul>
+  <li>No analytics, telemetry, or tracking.</li>
+  <li>No third-party scripts, fonts, or trackers in the extension.</li>
+  <li>No advertising. No ad networks. No retargeting.</li>
+  <li>No accounts. No user database. No backend at all.</li>
+  <li>No selling, renting, or sharing of any data with anyone.</li>
+</ul>
+
+<h2>This website</h2>
+<p>This landing page is hosted on Vercel and served as static HTML. We do not set cookies or run analytics on this site. Vercel may log standard request metadata (IP address, user-agent, request URL) as part of its standard operation — see <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel's privacy policy</a>.</p>
+
+<h2>Children</h2>
+<p>HourPilot is not directed at children under 13 and does not knowingly collect data from them. (In practice, it does not knowingly collect data from anyone — see above.)</p>
+
+<h2>Changes to this policy</h2>
+<p>If the privacy practices ever change, this page will be updated and the "Last updated" date above will reflect the change. Material changes will be noted in the extension's release notes.</p>
+
+<h2>Contact</h2>
+<p>Questions about privacy or anything else: <a href="mailto:hourpilot.support@gmail.com">hourpilot.support@gmail.com</a></p>
+
+<h2>Trademark</h2>
+<p>HourPilot is independent software and is not affiliated with, endorsed by, or sponsored by Toggl OÜ. Toggl is a registered trademark of Toggl OÜ.</p>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="brand-mark small">H</div>
+      <span>HourPilot</span>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="mailto:hourpilot.support@gmail.com">Support</a>
+    </nav>
+  </div>
+</footer>
 
 </body>
 </html>
